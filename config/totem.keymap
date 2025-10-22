@@ -2,6 +2,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+&mt {
+    tapping-term-ms = <400>;
+    flavor = "balanced";
+};
+
 / {
     behaviors {
         toLayerOnHold: toLayerOnHold {
@@ -10,18 +15,8 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-            hold-while-undecided;
-        };
-
-        modOnHold: modOnHold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MODONHOLD";
-            bindings = <&mt>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <400>;
+            flavor = "balanced";
         };
     };
 
@@ -30,10 +25,10 @@
 
         layer_0 {
             bindings = <
-       &kp Q               &kp W           &kp E               &kp R                   &kp T                   &kp Y     &kp U              &kp I                &kp O            &kp P
-       &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F        &kp G                   &kp H     &mt RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RIGHT_ALT L  &kp RCTRL
-&none  &kp Z               &kp X           &kp C               &kp V                   &kp B                   &kp N     &kp M              &kp COMMA            &kp DOT          &none      &none
-                                           &kp ESC             &toLayerOnHold 1 SPACE  &toLayerOnHold 2 TAB    &kp BSPC  &kp RET            &none
+       &kp Q               &kp W           &kp E                   &kp R                 &kp T      &kp Y  &kp U              &kp I                &kp O            &kp P
+       &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_COMMAND D      &mt LEFT_SHIFT F      &kp G      &kp H  &mt RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RIGHT_ALT L  &kp RCTRL
+&none  &kp Z               &kp X           &kp C                   &kp V                 &kp B      &kp N  &kp M              &kp COMMA            &kp DOT          &none      &none
+                                           &toLayerOnHold 1 SPACE  &toLayerOnHold 2 TAB  &kp ESC    &none  &kp BACKSPACE      &kp ENTER
             >;
         };
 
