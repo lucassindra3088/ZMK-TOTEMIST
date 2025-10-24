@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -9,8 +9,6 @@
     tapping-term-ms = <200>;
     flavor = "balanced";
 };
-
-time-to-max-speed-ms = <50>;};
 
 &msc { time-to-max-speed-ms = <50>; };
 
