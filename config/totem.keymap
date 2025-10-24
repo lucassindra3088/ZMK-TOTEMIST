@@ -7,7 +7,7 @@
     flavor = "balanced";
 };
 
-&mmv { acceleration-exponent = <3>; };
+time-to-max-speed-ms = <50>;};
 
 &msc { time-to-max-speed-ms = <50>; };
 
@@ -47,9 +47,9 @@
 
         layer_2 {
             bindings = <
-        &none           &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none              &none   &kp PG_UP  &kp UP      &kp PG_DN  &none
-        &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT    &none   &kp LEFT   &kp DOWN    &kp RIGHT  &none
-&trans  &trans          &msc SCRL_UP    &mkp MCLK       &msc SCRL_DOWN   &trans             &none   &kp HOME   &none       &kp END    &none  &trans
+        &none           &mkp LCLK       &mkp MB3        &mkp RCLK        &none              &none   &kp PG_UP  &none           &kp PG_DN  &none
+        &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &msc SCRL_RIGHT    &none   &kp LEFT   &kp UP_ARROW    &kp RIGHT  &none
+&trans  &trans          &msc SCRL_UP    &mmv MOVE_DOWN  &msc SCRL_DOWN   &trans             &none   &kp HOME   &kp DOWN_ARROW  &kp END    &none  &trans
                                         &trans          &trans           &trans             &trans  &trans     &caps_word
             >;
         };
